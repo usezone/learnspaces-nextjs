@@ -1,0 +1,109 @@
+/* Basic editor styles */
+.ProseMirror > * + * {
+  color: #f2f2f2;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding: 0 1rem;
+}
+
+.ProseMirror ol li::marker,
+.ProseMirror ul li::marker {
+  color: #fff;
+  font-weight: bold;
+}
+
+.ProseMirror {
+  color: #e2e2e2;
+}
+
+.ProseMirror blockquote {
+  color: #e2e2e2;
+  quotes: none;
+}
+
+.ProseMirror strong {
+  color: #fff;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  line-height: 1.1;
+  color: #fff;
+}
+.ProseMirror code {
+  background-color: rgba(97, 97, 97, 0.2);
+  color: #e2e2e2;
+}
+.ProseMirror pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+.ProseMirror pre code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+.ProseMirror blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+}
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 2rem 0;
+}
+
+.ProseMirror p.is-empty::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror ul[data-type="taskList"] {
+  list-style: none;
+  padding: 0;
+}
+
+.ProseMirror ul[data-type="taskList"] > li {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+[type="checkbox"] + span {
+  margin-right: 10px;
+}
+
+[type="checkbox"] + span {
+  transition: ease-in-out 0.4s;
+}
+
+li[data-checked="true"] div {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: ease-in-out 0.2s;
+}
+
+[type="checkbox"] + span:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.ProseMirror ul[data-type="taskList"] > li {
+  margin-bottom: -25px;
+}
