@@ -47,7 +47,20 @@ const Editor = () => {
       Placeholder.configure({
         placeholder: "Write something...",
       }),
-      TextStyle.configure({ types: [TextStyle.name, ListItem.name] }),
+      TextStyle.configure({
+        [TextStyle.name]: {
+          // Specify the properties for TextStyle.name
+          // For example:
+          fontSize: 16,
+          fontWeight: "bold",
+        },
+        [ListItem.name]: {
+          // Specify the properties for ListItem.name
+          // For example:
+          fontSize: 14,
+          fontStyle: "italic",
+        },
+      }),
       StarterKit.configure({
         bulletList: {
           keepMarks: true,

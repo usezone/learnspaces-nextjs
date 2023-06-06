@@ -104,6 +104,10 @@ li[data-checked="true"] div {
   cursor: pointer;
 }
 
+
+[type="checkbox"] div p {
+  margin-top: 30px;
+}
 .ProseMirror ul[data-type="taskList"] > li {
   margin-bottom: -25px;
 }
