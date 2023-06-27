@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import supabase from "../../lib/supabaseClient";
-import MessageLayout from "./MessageLayout";
+import MessageLayout from "./message-layout";
 
 type User = {
   id: string;

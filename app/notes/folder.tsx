@@ -1,7 +1,7 @@
 import { FolderIcon } from "@iconicicons/react";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
-const Folder = ({ isActive, title }) => {
+const Folder = ({ isActive, title }: { isActive: boolean; title: string }) => {
   return (
     <button
       className={`card rounded-lg ${

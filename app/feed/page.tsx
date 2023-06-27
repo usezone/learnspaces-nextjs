@@ -1,7 +1,7 @@
-import CreatePost from "./CreatePost";
-import Post from "./Post";
-import Explore from "./Explore";
-import SpaceAndProfileDetails from "./SpaceAndProfileDetails";
+import CreatePost from "./create-post";
+import Post from "./post";
+import Explore from "./explore";
+import SpaceAndProfileDetails from "./space-details";
 
 export default function Feed() {
   return (

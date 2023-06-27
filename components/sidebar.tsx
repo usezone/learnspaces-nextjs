@@ -7,7 +7,7 @@ import {
   InboxIcon,
   DocumentTextIcon,
   BellIcon,
-  Cog8ToothIcon,
+  Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
 
 export const pages = [
@@ -70,23 +70,7 @@ const Sidebar = () => {
         ))}
       </ul>
 
-      <ul className="p-1 flex flex-col items-center space-y-3">
-        <li
-          className="tooltip tooltip-right tooltip-secondary"
-          data-tip="preciouskayili"
-        >
-          <Link
-            className="btn btn-md btn-ghost btn-square transition-all"
-            // activeClassName="btn-active"
-            href="/"
-          >
-            <div className="avatar placeholder">
-              <div className="rounded-md w-10 bg-primary font-bold text-neutral-content">
-                <span>Z</span>
-              </div>
-            </div>
-          </Link>
-        </li>
+      <ul className="p-1 flex flex-col items-center space-y-1">
         <li
           className="tooltip tooltip-right tooltip-secondary"
           data-tip="Settings"
@@ -97,7 +81,24 @@ const Sidebar = () => {
             // activeClassName="btn-active"
             href="/settings"
           >
-            <Cog8ToothIcon height={22} width={22} />
+            <Cog6ToothIcon height={22} width={22} />
+          </Link>
+        </li>
+
+        <li
+          className="tooltip tooltip-right tooltip-secondary"
+          data-tip="preciouskayili"
+        >
+          <Link
+            className="btn btn-md btn-ghost btn-square transition-all"
+            // activeClassName="btn-active"
+            href="/"
+          >
+            <div className="avatar placeholder">
+              <div className="rounded-md w-8 bg-primary font-bold text-neutral-content">
+                <span>Z</span>
+              </div>
+            </div>
           </Link>
         </li>
       </ul>

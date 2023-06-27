@@ -1,4 +1,4 @@
-import NewContactProfile from "./NewContactProfile";
+import NewContactProfile from "./new-contact-profile";
 
 const NewContact = () => {
   return (

@@ -1,8 +1,6 @@
 import "./globals.css";
-import { Plus_Jakarta_Sans } from "next/font/google";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar";
 
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Learnspaces",
@@ -16,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={plusJakartaSans.className}>
+      <body>
         <div className="flex">
           <Sidebar />
           <div className="w-full">{children}</div>

@@ -17,15 +17,15 @@ import Underline from "@tiptap/extension-underline";
 import Placeholder from "@tiptap/extension-placeholder";
 import TaskList from "@tiptap/extension-task-list";
 import { helloWorld } from "./templates/default";
-import CodeBlock from "./CodeBlock";
-import MenuBar from "./MenuBar";
+import CodeBlock from "./code-block";
+import MenuBar from "./menu-bar";
 
 import "highlight.js/styles/vs2015.css";
 import "./editor.css";
 import TaskItem from "@tiptap/extension-task-item";
 import Strike from "@tiptap/extension-strike";
-import FloatingMenubar from "./FloatingMenubar";
-import PopupMenubar from "./PopupMenubar";
+import FloatingMenubar from "./floating-menubar";
+import PopupMenubar from "./popup-menubar";
 
 highlightLanguages.forEach((language) => {
   lowlight.registerLanguage(language.name, language);

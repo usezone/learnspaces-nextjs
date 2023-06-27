@@ -1,6 +1,6 @@
-import NotesList from "./NotesList";
-import Nav from "./Nav";
-import Editor from "./Editor";
+import NotesList from "./notes-list";
+import Nav from "./nav";
+import Editor from "./editor";
 const Notes = () => {
   return (
     <NotesList>

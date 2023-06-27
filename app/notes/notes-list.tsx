@@ -1,8 +1,8 @@
 import { IconSearch, IconFolder, IconUserPlus } from "@tabler/icons-react";
-import Note from "./Note";
-import Folder from "./Folder";
-import NewFolder from "./Files/NewFolder";
-import NewFile from "./Files/NewFile";
+import Note from "./note";
+import Folder from "./folder";
+import NewFolder from "./files/new-folder";
+import NewFile from "./files/new-file";
 
 const NotesList = ({ children }: { children: React.ReactNode }) => {
   return (

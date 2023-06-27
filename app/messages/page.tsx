@@ -1,8 +1,8 @@
 "use client";
 
-import UserList from "./UserList";
-import Message from "./Message";
-import NewContact from "./NewContact";
+import UserList from "./user-list";
+import Message from "./message";
+import NewContact from "./new-contact";
 import { IconEdit } from "@tabler/icons-react";
 
 type MessagesProps = {

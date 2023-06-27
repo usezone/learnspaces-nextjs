@@ -1,5 +1,5 @@
-import Chat from "./Chat";
-import ChannelChat from "./ChannelChat";
+import Chat from "./chat";
+import ChannelChat from "./channel-chat";
 import { HashtagIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const UserList = () => {

@@ -3,14 +3,20 @@ import { v4 as uuidv4 } from "uuid";
 import supabase from "../../lib/supabaseClient";
 import { IconMoodHappy, IconPhoto } from "@tabler/icons-react";
 import { IconGif } from "@tabler/icons-react";
-import Chat from "./Chat";
+import Chat from "./chat";
+import { IconSend } from "@tabler/icons-react";
+
+type User = {
+  id: string;
+  email: string;
+};
 
 const MessageLayout = ({ children }: { children: React.ReactNode }) => {
   const [inputValue, setInputValue] = useState("");
-  const [user, setUser] = useState();
+  const [user, setUser] = useState<any | null>(null);
 
   // Generate a UUID if the user is not authenticated
-  const senderId = user ? user.id : uuidv4();
+  const senderId = user ? user.data.user?.id : uuidv4();
   const roomId = uuidv4();
   const messageId = uuidv4();
 
@@ -41,7 +47,7 @@ const MessageLayout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const getUser = async () => {
       const { data: user } = await supabase.auth.getUser();
-      setUser(user);
+      setUser(user.user);
     };
     getUser();
   }, []);
@@ -53,7 +59,7 @@ const MessageLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="p-5">{children}</div>
       </div>
       <div className="relative bottom-0 left-0 w-full bg-base-100 px-1">
-        <div className="flex  items-center justify-between p-2">
+        <div className="flex items-center justify-between p-2">
           <div className="flex p-1 space-x-2">
             <button className="btn btn-ghost btn-sm btn-square">
               <IconPhoto />
@@ -69,10 +75,14 @@ const MessageLayout = ({ children }: { children: React.ReactNode }) => {
             value={inputValue}
             onKeyDown={handleKeyDown}
             onChange={handleInputChange}
-            type="text"
+            type="text" 
             className="input h-14 input-lg w-full bg-transparent outline-0 focus:outline-0 placeholder:text-base text-base placeholder:text-gray-400"
             placeholder="Message"
           />
+
+          <button className="btn btn-square btn-sm btn-primary">
+            <IconSend />
+          </button>
         </div>
       </div>
     </div>

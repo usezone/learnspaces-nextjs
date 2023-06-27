@@ -1,6 +1,6 @@
 import { FileTextIcon } from "@iconicicons/react";
 
-const Note = ({ isActive, title }) => {
+const Note = ({ isActive, title }: { isActive: boolean; title: string }) => {
   return (
     <div
       className={`card rounded-lg ${
