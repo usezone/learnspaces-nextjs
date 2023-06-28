@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.2.3",
+    "encoding": "^0.1.13",
     "prisma": "^4.14.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
