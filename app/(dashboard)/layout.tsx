@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../../components/sidebar";
+import Sidebar from "../../components/ui/sidebar";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 export const metadata = {
