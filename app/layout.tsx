@@ -1,6 +1,7 @@
 import "./globals.css";
-import Sidebar from "../components/sidebar";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { clerkPublishableKey } from "@/config";
 
 export const metadata = {
   title: "Learnspaces",
@@ -15,13 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={plusJarkataSans.className}>
-        <div className="flex">
-          <Sidebar />
-          <div className="w-full">{children}</div>
-        </div>
-      </body>
-    </html>
+    <ClerkProvider publishableKey={clerkPublishableKey}>
+      <html lang="en">
+        <body className={plusJarkataSans.className}>
+            {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

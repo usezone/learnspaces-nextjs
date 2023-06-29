@@ -8,7 +8,7 @@ import SettingsIcon from "../icons/SettingsIcon";
 import Link from "next/link";
 import Clusters from "./clusters";
 import RecentActivity from "./recent-activity";
-import Pages from "./pages";
+import { UserButton } from "@clerk/nextjs";
 import { useState } from "react";
 
 const pages = [
@@ -66,9 +66,7 @@ export default function Home() {
             </h3>
 
             <div className="avatar placeholder ml-auto">
-              <div className="rounded-full w-14 bg-primary font-bold text-neutral-content">
-                <span>Z</span>
-              </div>
+              <UserButton afterSignOutUrl="/" />
             </div>
           </div>
 
