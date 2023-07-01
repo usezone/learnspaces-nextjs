@@ -76,6 +76,7 @@ export default function Home() {
                 onMouseEnter={() => setTheme(page.theme)}
                 onMouseLeave={() => setTheme("primary")}
                 href={page.path}
+                key={page.name}
                 className="w-full lg:4/12 xl:w-3/12 p-2"
               >
                 <div className="flex items-center rounded-2xl cursor-pointer p-2 bg-black/10 border border-white/5 hover:bg-white/5">
@@ -93,7 +94,7 @@ export default function Home() {
                     </p>
                   </div>
                   <span className="ml-auto">
-                    <ChevronRightIcon height={20} width={20} />
+                    <ChevronRightIcon height={16} width={16} />
                   </span>
                 </div>
               </Link>
